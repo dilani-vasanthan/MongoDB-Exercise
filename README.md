@@ -17,54 +17,16 @@ movies>
 
 
 3.Create above 5 movie documents into a moviedetails collection.
-movies> db.moviedetails.insertMany([{ "Movie-Title": "Jurassic Park" },{ "Movie-Title": "Forrest Gump" },{ "Movie-Title": "Titanic"},{ "Movie-Title": "The Dark Knight" },{ "Movie-Title": "Avatar" }])
+movie> db.moviedetails.insertMany([{MovieTitle:"Jurassic Park",GenreType:"Adventure",Director:"Steven Spielberg",ReleaseYear:1993},{MovieTitle:"Forrest Gump",GenreType:"Drama",Director:"Robert Zemeckies",ReleaseYear:1994},{MovieTitle:"Titanic",GenreType:"Romance",Director:"James Cameron",ReleaseYear:1997},{MovieTitle:"The Dark Knight",GenreType:"Action",Director:"Christopher Nolan",ReleaseYear:2008},{MovieTitle:"Avatar",GenreType:"Science Fiction",Director:"James Cameron",ReleaseYear:2009}])
 
 {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId("654c7ec3d200188bf7133fa2"),
-    '1': ObjectId("654c7ec3d200188bf7133fa3"),
-    '2': ObjectId("654c7ec3d200188bf7133fa4"),
-    '3': ObjectId("654c7ec3d200188bf7133fa5"),
-    '4': ObjectId("654c7ec3d200188bf7133fa6")
-  }
-}
-movies> db.moviedetails.insertMany([{"Genre/Type": "Adventure"},{"Genre/Type": "Drama"},{"Genre/Type": "Romance "},{"Genre/Type":"Action"},{"Genre/Type":"Science Fiction"}])
-
-{
-  acknowledged: true,
-  insertedIds: {
-    '0': ObjectId("654c81e7d200188bf7133fb2"),
-    '1': ObjectId("654c81e7d200188bf7133fb3"),
-    '2': ObjectId("654c81e7d200188bf7133fb4"),
-    '3': ObjectId("654c81e7d200188bf7133fb5"),
-    '4': ObjectId("654c81e7d200188bf7133fb6")
-  }
-}
-
-db.moviedetails.insertMany([{"Director": "Steven Spielberg"},{"Director":"Robert Zemeckies"},{"Director":"James Cameron"},{"Director":"Christopher Nolan"},{"Director":"James Cameron"}])
-
-{
-  acknowledged: true,
-  insertedIds: {
-    '0': ObjectId("654c85ea8f3a24e34a1ba9b2"),
-    '1': ObjectId("654c85ea8f3a24e34a1ba9b3"),
-    '2': ObjectId("654c85ea8f3a24e34a1ba9b4"),
-    '3': ObjectId("654c85ea8f3a24e34a1ba9b5"),
-    '4': ObjectId("654c85ea8f3a24e34a1ba9b6")
-  }
-}
-
-db.moviedetails.insertMany([{"Release Year":"1993"},{"Release Year":"1994"},{"Release Year":"1997"},{"Release Year":"2008"},{"Release Year":"2009"}])
-
-{
-  acknowledged: true,
-  insertedIds: {
-    '0': ObjectId("654c883a8f3a24e34a1ba9b7"),
-    '1': ObjectId("654c883b8f3a24e34a1ba9b8"),
-    '2': ObjectId("654c883b8f3a24e34a1ba9b9"),
-    '3': ObjectId("654c883b8f3a24e34a1ba9ba"),
-    '4': ObjectId("654c883b8f3a24e34a1ba9bb")
+    '0': ObjectId("654c9db67d1937f1690a9255"),
+    '1': ObjectId("654c9db67d1937f1690a9256"),
+    '2': ObjectId("654c9db67d1937f1690a9257"),
+    '3': ObjectId("654c9db67d1937f1690a9258"),
+    '4': ObjectId("654c9db67d1937f1690a9259")
   }
 }
 
@@ -74,82 +36,108 @@ db.moviedetails.find()
 
 [
   {
-    _id: ObjectId("654c7ec3d200188bf7133fa2"),
-    'Movie-Title': 'Jurassic Park'
+    _id: ObjectId("654c9db67d1937f1690a9255"),
+    MovieTitle: 'Jurassic Park',
+    GenreType: 'Adventure',
+    Director: 'Steven Spielberg',
+    ReleaseYear: 1993
   },
   {
-    _id: ObjectId("654c7ec3d200188bf7133fa3"),
-    'Movie-Title': 'Forrest Gump'
+    _id: ObjectId("654c9db67d1937f1690a9256"),
+    MovieTitle: 'Forrest Gump',
+    GenreType: 'Drama',
+    Director: 'Robert Zemeckies',
+    ReleaseYear: 1994
   },
   {
-    _id: ObjectId("654c7ec3d200188bf7133fa4"),
-    'Movie-Title': 'Titanic'
+    _id: ObjectId("654c9db67d1937f1690a9257"),
+    MovieTitle: 'Titanic',
+    GenreType: 'Romance',
+    Director: 'James Cameron',
+    ReleaseYear: 1997
   },
   {
-    _id: ObjectId("654c7ec3d200188bf7133fa5"),
-    'Movie-Title': 'The Dark Knight'
+    _id: ObjectId("654c9db67d1937f1690a9258"),
+    MovieTitle: 'The Dark Knight',
+    GenreType: 'Action',
+    Director: 'Christopher Nolan',
+    ReleaseYear: 2008
   },
   {
-    _id: ObjectId("654c7ec3d200188bf7133fa6"),
-    'Movie-Title': 'Avatar'
-  },
-  {
-    _id: ObjectId("654c7f0cd200188bf7133fa7"),
-    'Movie-Title': 'Jurassic Park'
-  },
-  {
-    _id: ObjectId("654c7f0cd200188bf7133fa8"),
-    'Movie-Title': 'Forrest Gump'
-  },
-  {
-    _id: ObjectId("654c7f0cd200188bf7133fa9"),
-    'Movie-Title': 'Titanic'
-  },
-  {
-    _id: ObjectId("654c7f0cd200188bf7133faa"),
-    'Movie-Title': 'The Dark Knight'
-  },
-  {
-    _id: ObjectId("654c7f0cd200188bf7133fab"),
-    'Movie-Title': 'Avatar'
-  },
-  {
-    _id: ObjectId("654c80b6d200188bf7133fac"),
-    'Genre/Type': 'Adventure'
-  },
-  { _id: ObjectId("654c80b6d200188bf7133fad"), 'Genre/Type': 'Drama' },
-  {
-    _id: ObjectId("654c80b6d200188bf7133fae"),
-    'Genre/Type': 'Romance '
-  },
-  {
-    _id: ObjectId("654c80ead200188bf7133faf"),
-    'Genre/Type': 'Adventure'
-  },
-  { _id: ObjectId("654c80ead200188bf7133fb0"), 'Genre/Type': 'Drama' },
-  {
-    _id: ObjectId("654c80ead200188bf7133fb1"),
-    'Genre/Type': 'Romance '
-  },
-  {
-    _id: ObjectId("654c81e7d200188bf7133fb2"),
-    'Genre/Type': 'Adventure'
-  },
-  { _id: ObjectId("654c81e7d200188bf7133fb3"), 'Genre/Type': 'Drama' },
-  {
-    _id: ObjectId("654c81e7d200188bf7133fb4"),
-    'Genre/Type': 'Romance '
-  },
-  { _id: ObjectId("654c81e7d200188bf7133fb5"), 'Genre/Type': 'Action' }
+    _id: ObjectId("654c9db67d1937f1690a9259"),
+    MovieTitle: 'Avatar',
+    GenreType: 'Science Fiction',
+    Director: 'James Cameron',
+    ReleaseYear: 2009
+  }
 ]
-Type "it" for more
 
 
 
 5.List James Cameron’s movies.
+movie> db.moviedetails.find({Director:"James Cameron"})
 
-List  James Cameron’s movies released in 2009.
-Delete the movie which you don’t like.
-Add the movie which is your favourite. 
-List movie Directed  by Christopher Nolan in 1994.
-  10.  List out the Director’s Name in your document. 
+[
+  {
+    _id: ObjectId("654c9db67d1937f1690a9257"),
+    MovieTitle: 'Titanic',
+    GenreType: 'Romance',
+    Director: 'James Cameron',
+    ReleaseYear: 1997
+  },
+  {
+    _id: ObjectId("654c9db67d1937f1690a9259"),
+    MovieTitle: 'Avatar',
+    GenreType: 'Science Fiction',
+    Director: 'James Cameron',
+    ReleaseYear: 2009
+  }
+]
+
+
+6.List  James Cameron’s movies released in 2009.
+movie> db.moviedetails.find({Director:"James Cameron",ReleaseYear:2009})
+
+[
+  {
+    _id: ObjectId("654c9db67d1937f1690a9259"),
+    MovieTitle: 'Avatar',
+    GenreType: 'Science Fiction',
+    Director: 'James Cameron',
+    ReleaseYear: 2009
+  }
+]
+7.Delete the movie which you don’t like.
+movie> db.moviedetails.remove({ MovieTitle:"Avatar" })
+
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 1 }
+
+
+8.Add the movie which is your favourite. 
+movie> db.collection_name.insertOne({ MovieTitle:"Leo",GenreType:"comedy",Director:"Dilani",ReleaseYear:2022})
+{
+  acknowledged: true,
+  insertedId: ObjectId("654ca2b27d1937f1690a925b")
+}
+9.List movie Directed  by Christopher Nolan in 1994.
+movie> db.moviedetails.find({Director:"Christopher Nolan",ReleaseYear:2008})
+[
+  {
+    _id: ObjectId("654c9db67d1937f1690a9258"),
+    MovieTitle: 'The Dark Knight',
+    GenreType: 'Action',
+    Director: 'Christopher Nolan',
+    ReleaseYear: 2008
+  }
+]
+ 10.  List out the Director’s Name in your document.
+
+movie> db.moviedetails.distinct("Director")
+[
+  'Christopher Nolan',
+  'James Cameron',
+  'Robert Zemeckies',
+  'Steven Spielberg'
+]
+
