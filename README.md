@@ -12,11 +12,12 @@ switched to db movies
 ```
 db.createCollection("moviedetails")
 
-{ ok: 1 }`` 
+{ ok: 1 }
 ```
 
 **3.Create above 5 movie documents into a moviedetails collection.**
-```movie> db.moviedetails.insertMany([{MovieTitle:"Jurassic Park",GenreType:"Adventure",Director:"Steven Spielberg",ReleaseYear:1993},{MovieTitle:"Forrest Gump",GenreType:"Drama",Director:"Robert Zemeckies",ReleaseYear:1994},{MovieTitle:"Titanic",GenreType:"Romance",Director:"James Cameron",ReleaseYear:1997},{MovieTitle:"The Dark Knight",GenreType:"Action",Director:"Christopher Nolan",ReleaseYear:2008},{MovieTitle:"Avatar",GenreType:"Science Fiction",Director:"James Cameron",ReleaseYear:2009}])
+```
+movie> db.moviedetails.insertMany([{MovieTitle:"Jurassic Park",GenreType:"Adventure",Director:"Steven Spielberg",ReleaseYear:1993},{MovieTitle:"Forrest Gump",GenreType:"Drama",Director:"Robert Zemeckies",ReleaseYear:1994},{MovieTitle:"Titanic",GenreType:"Romance",Director:"James Cameron",ReleaseYear:1997},{MovieTitle:"The Dark Knight",GenreType:"Action",Director:"Christopher Nolan",ReleaseYear:2008},{MovieTitle:"Avatar",GenreType:"Science Fiction",Director:"James Cameron",ReleaseYear:2009}])
 
 {
   acknowledged: true,
@@ -70,10 +71,11 @@ db.moviedetails.find()
     Director: 'James Cameron',
     ReleaseYear: 2009
   }
-]```
+]
+```
 
 
-** 5.List James Cameron’s movies.**
+**5.List James Cameron’s movies.**
 ```
 movie> db.moviedetails.find({Director:"James Cameron"})
 
@@ -107,12 +109,14 @@ movie> db.moviedetails.find({Director:"James Cameron"})
     Director: 'James Cameron',
     ReleaseYear: 2009
   }
-]```
+]
+```
 **7.Delete the movie which you don’t like.**
 ```movie> db.moviedetails.remove({ MovieTitle:"Avatar" })
 
 DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
-{ acknowledged: true, deletedCount: 1 }```
+{ acknowledged: true, deletedCount: 1 }
+```
 
 
 **8.Add the movie which is your favourite.**
@@ -120,9 +124,11 @@ DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany
 {
   acknowledged: true,
   insertedId: ObjectId("654ca2b27d1937f1690a925b")
-}```
+}
+```
 **9.List movie Directed  by Christopher Nolan in 1994.**
-```movie> db.moviedetails.find({Director:"Christopher Nolan",ReleaseYear:2008})
+```
+movie> db.moviedetails.find({Director:"Christopher Nolan",ReleaseYear:2008})
 [
   {
     _id: ObjectId("654c9db67d1937f1690a9258"),
@@ -131,14 +137,17 @@ DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany
     Director: 'Christopher Nolan',
     ReleaseYear: 2008
   }
-]```
- **10.  List out the Director’s Name in your document.**
+]
+```
+ **10.  List out the Director’s Name in your document**
 
-```movie> db.moviedetails.distinct("Director")
+```
+movie> db.moviedetails.distinct("Director")
 [
   'Christopher Nolan',
   'James Cameron',
   'Robert Zemeckies',
   'Steven Spielberg'
-]```
+]
+```
 
