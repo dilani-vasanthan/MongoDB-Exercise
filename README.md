@@ -1,23 +1,19 @@
-# MongoDB-Exercise
+## MongoDB-Exercise
 
 **1.Create a Database called movies.**
 ``use movies
 
  use movies
-switched to db movies
-movies> ``
+switched to db movies``
 
 **2.Create a collection called moviedetails**
 ``db.createCollection("moviedetails")
 
-{ ok: 1 }
-movies>`` 
-
-
+{ ok: 1 }`` 
 
 
 **3.Create above 5 movie documents into a moviedetails collection.**
-``movie> db.moviedetails.insertMany([{MovieTitle:"Jurassic Park",GenreType:"Adventure",Director:"Steven Spielberg",ReleaseYear:1993},{MovieTitle:"Forrest Gump",GenreType:"Drama",Director:"Robert Zemeckies",ReleaseYear:1994},{MovieTitle:"Titanic",GenreType:"Romance",Director:"James Cameron",ReleaseYear:1997},{MovieTitle:"The Dark Knight",GenreType:"Action",Director:"Christopher Nolan",ReleaseYear:2008},{MovieTitle:"Avatar",GenreType:"Science Fiction",Director:"James Cameron",ReleaseYear:2009}])
+``movie> db.moviedetails.insertMany([{MovieTitle:"Jurassic Park",GenreType:"Adventure",Director:"Steven Spielberg",ReleaseYear:1993},{MovieTitle:"Forrest Gump",GenreType:"Drama",Director:"Robert Zemeckies",ReleaseYear:1994},{MovieTitle:"Titanic",GenreType:"Romance",Director:"James Cameron",ReleaseYear:1997},{MovieTitle:"The Dark Knight",GenreType:"Action",Director:"Christopher Nolan",ReleaseYear:2008},{MovieTitle:"Avatar",GenreType:"Science Fiction",Director:"James Cameron",ReleaseYear:2009}])``
 
 {
   acknowledged: true,
@@ -69,7 +65,7 @@ db.moviedetails.find()
     GenreType: 'Science Fiction',
     Director: 'James Cameron',
     ReleaseYear: 2009
-  }
+  }``
 ]``
 
 
@@ -90,7 +86,7 @@ db.moviedetails.find()
     GenreType: 'Science Fiction',
     Director: 'James Cameron',
     ReleaseYear: 2009
-  }
+  }``
 ]``
 
 
@@ -104,8 +100,8 @@ db.moviedetails.find()
     GenreType: 'Science Fiction',
     Director: 'James Cameron',
     ReleaseYear: 2009
-  }
-]``
+  }``
+]
 **7.Delete the movie which you don’t like.**
 ``movie> db.moviedetails.remove({ MovieTitle:"Avatar" })
 
