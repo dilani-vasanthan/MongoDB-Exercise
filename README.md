@@ -99,7 +99,8 @@ movie> db.moviedetails.find({Director:"James Cameron"})
 
 
 **6.List  James Cameron’s movies released in 2009.**
-``` movie> db.moviedetails.find({Director:"James Cameron",ReleaseYear:2009})
+```
+movie> db.moviedetails.find({Director:"James Cameron",ReleaseYear:2009})
 
 [
   {
@@ -112,7 +113,8 @@ movie> db.moviedetails.find({Director:"James Cameron"})
 ]
 ```
 **7.Delete the movie which you don’t like.**
-```movie> db.moviedetails.remove({ MovieTitle:"Avatar" })
+```
+movie> db.moviedetails.remove({ MovieTitle:"Avatar" })
 
 DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
 { acknowledged: true, deletedCount: 1 }
@@ -120,7 +122,8 @@ DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany
 
 
 **8.Add the movie which is your favourite.**
-```movie> db.collection_name.insertOne({ MovieTitle:"Leo",GenreType:"comedy",Director:"Dilani",ReleaseYear:2022})
+```
+movie> db.collection_name.insertOne({ MovieTitle:"Leo",GenreType:"comedy",Director:"Dilani",ReleaseYear:2022})
 {
   acknowledged: true,
   insertedId: ObjectId("654ca2b27d1937f1690a925b")
